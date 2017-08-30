@@ -1,6 +1,4 @@
-require 'redcarpet'
-
-module ApplicationHelper
+module QuestionsHelper
   def markdown(text)
     options = {
       filter_html:     true,

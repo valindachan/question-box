@@ -57,3 +57,5 @@ end
 group :production do
   gem 'rails_12factor'
 end
+
+gem 'redcarpet', '~> 3.0.0'
