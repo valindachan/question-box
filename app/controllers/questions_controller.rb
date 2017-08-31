@@ -2,6 +2,13 @@ class QuestionsController < ApplicationController
   # GET /questions
   def index
     @questions = Question.all
+
+    page_number = params[:page]
+    @questions = Question.page(page_number)
+
+    # @questions = Question.order(:title).page params[:page]
+
+    # @questions = Question.page(params[:page]).per(1)
   end
 
   # GET /questions/1

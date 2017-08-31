@@ -59,3 +59,5 @@ group :production do
 end
 
 gem 'redcarpet', '~> 3.0.0'
+
+gem 'kaminari'
