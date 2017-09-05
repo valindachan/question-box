@@ -19,7 +19,7 @@
     <tbody class="table-body">
       <%- @questions.each do |question| %>
       <tr>
-        <td><%= question.title %></td>
+        <td><%= link_to question do %><%= question.title %><% end %></td>
         <td><%= markdown(question.details) %></td>
         <td>
           <%= link_to question do %>

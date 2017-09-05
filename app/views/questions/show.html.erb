@@ -7,7 +7,7 @@
     <span class="glyphicon glyphicon-pencil"></span>
     Edit
   <% end %>
-  <h1>Show question</h1>
+  <h1><%= @question.title %></h1>
 </div>
 
 <dl class="dl-horizontal">
@@ -16,5 +16,15 @@
 
   <dt>Details:</dt>
   <dd><%= @question.details %></dd>
+
+  <dt>Created by:</dt>
+  <dd>
+    <% if @question.user.present? %>
+    <%= @question.user.email %>
+    <% else %>
+    N/A
+    <% end %>
+
+    </dd>
 
 </dl>
